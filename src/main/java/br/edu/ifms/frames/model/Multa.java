@@ -27,7 +27,7 @@ public class Multa implements Serializable{
 	@JoinColumn(name="carro_id")
 	private Carro carro;
 	
-	@JsonIgnore
+	
 	@ManyToOne
 	@JoinColumn(name="infracao_id")
 	private Infracao infracao;

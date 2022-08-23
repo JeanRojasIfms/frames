@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Infracao implements Serializable{
 
@@ -23,6 +25,7 @@ public class Infracao implements Serializable{
 	private int pontos;
 	private float valor;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "infracao")
 	private List<Multa> multas = new ArrayList<Multa>();
 	
